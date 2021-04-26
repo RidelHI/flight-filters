@@ -1,0 +1,15 @@
+<div class="select" [matMenuTriggerFor]="menu">
+  <span class="select__title">{{ getTotal() }}</span>
+  <i class="pi pi-angle-down select__icon"></i>
+</div>
+<mat-menu #menu="matMenu" class="quantifymenu">
+  <div (click)="$event.stopPropagation();" class="quantifymenu__row" *ngFor="let item of data">
+    <div class="quantifymenu__left">
+      <i [ngClass]="'quantifymenu__icon pi ' + item.icon"></i>
+      <p class="quantifymenu__title">{{ item.title }}</p>
+      <p class="quantifymenu__limit">{{ item.limit }}</p>
+    </div>    
+    <app-range class="quantifymenu__range" [value]="item.count" (updateValue)="onChangeValue(item, $event)"></app-range>
+  </div>
+  <p class="quantifymenu__footer">{{footerText}}</p>
+</mat-menu>

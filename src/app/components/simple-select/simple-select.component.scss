@@ -1,0 +1,10 @@
+::ng-deep .cdk-overlay-pane {
+  & > .mat-menu-panel.select__menu {
+    margin-top: -1.2rem;
+    max-width: 324px;
+
+    & > .mat-menu-content {
+      padding: 1.5rem;
+    }
+  }
+}

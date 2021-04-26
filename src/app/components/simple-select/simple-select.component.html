@@ -1,0 +1,8 @@
+<div class="select" [matMenuTriggerFor]="menu">
+  <span class="select__title">{{ itemSelected }}</span>
+  <i class="pi pi-angle-down select__icon"></i>
+</div>
+
+<mat-menu #menu="matMenu" class="select__menu">
+  <button mat-menu-item *ngFor="let item of data" (click)="onSelectItem(item)">{{ item }}</button>
+</mat-menu>

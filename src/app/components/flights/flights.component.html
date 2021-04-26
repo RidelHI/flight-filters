@@ -1,0 +1,14 @@
+<div class="flights">
+    <h1 class="flights__title">Search hundreds of travel sites at once.</h1>
+    <div class="flights__filters">
+        <app-simple-select [data]="flightType"></app-simple-select>
+        <app-quantify-select [title]="'Travelers'" [data]="passengers"></app-quantify-select>
+        <app-simple-select [data]="flightClass"></app-simple-select>
+        <app-quantify-select [title]="'Bags'" [footerText]="'Baggage per passenger'" [data]="bags"></app-quantify-select>
+    </div>
+    <div class="flights__search">
+        <app-chips-container [text]="'From?'" [chips]="chipsFromArray"></app-chips-container>
+        <app-swap-button class="flights__swap"></app-swap-button>
+        <app-chips-container [text]="'To?'" [chips]="chipsToArray"></app-chips-container>
+    </div>
+</div>

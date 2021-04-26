@@ -1,0 +1,16 @@
+<div class="container" [matMenuTriggerFor]="menu">
+  <div class="container__left" (click)="$event.stopPropagation();">
+    <mat-icon *ngIf="chips.length === 0">flight</mat-icon>
+    <span *ngIf="chips.length === 0" class="container__label">{{text}}</span>
+    <app-chip
+      class="container__chip"
+      *ngFor="let item of chips; let i = index"
+      [text]="item"
+      (remove)="onRemove(i)"
+    ></app-chip>
+  </div>
+  <span *ngIf="chips.length < 3" class="container__icon-right">+</span>
+</div>
+<mat-menu #menu="matMenu" class="container__menu">
+ <h1>Search</h1>
+</mat-menu>

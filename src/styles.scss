@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::ng-deep .cdk-overlay-pane {
+  & > .mat-menu-panel {
+    margin-top: -1rem;
+  }
+}
+
+.select {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 14px;
+    margin-right: 0.8rem;
+  }
+
+  &__icon {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    &__title {
+        font-size: 12px;
+        margin-right: 0.3rem;
+      }
+    
+      &__icon {
+        font-size: 0.7rem;
+      }
+  }
+}

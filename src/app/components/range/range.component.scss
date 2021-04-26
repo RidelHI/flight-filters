@@ -1,0 +1,31 @@
+.range {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+
+    border: 1px solid #9ba8b0;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+  }
+
+  &__label {
+      font-weight: 500;
+      color: #0080a4;
+  }
+
+  &__value {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+}
+

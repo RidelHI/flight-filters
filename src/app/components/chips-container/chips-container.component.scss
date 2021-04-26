@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 250px;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  background-color: #f3f5f7;
+  border-radius: 2px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    margin-left: 1rem;
+  }
+
+  &__chip {
+    margin-right: 4px;
+  }
+
+  &__icon-right {
+    font-size: 26px;
+    font-weight: 400;
+    color: rgba(128, 128, 128, 0.4);
+  }
+}
+
+::ng-deep .cdk-overlay-pane {
+  & > .mat-menu-panel.container__menu {
+    margin-top: -4rem;
+    max-width: 324px;
+
+    & > .mat-menu-content {
+      padding: 1.5rem;
+    }
+  }
+}
